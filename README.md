@@ -13,7 +13,7 @@ GeaouCoin is a Pow/PoS-based cryptocurrency, and depend upon libsecp256k1 by sip
   <li>Coin Type : POW/POS</li>
   <li>Algorith : Scrypt</li>
   <li>Total Coin Supply : 30 Million</li>
-  <li>Premine : 10% (3 Million)</li>
+  <li>Premine : 10% (3 Million) (7% payout lending, 2% listing fee, 1% development)</li>
   <li>Masternode Rewards : 50%</li>
   <li>POW Rewards : 30 GEAOU</li>
   <li>Stake : 10 GEAOU</li>
