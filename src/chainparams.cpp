@@ -134,12 +134,12 @@ public:
         vSeeds.push_back(CDNSSeedData("3",  "node3.geaoucoin.org"));
         vSeeds.push_back(CDNSSeedData("4",  "node4.geaoucoin.org"));
         vSeeds.push_back(CDNSSeedData("5",  "node5.geaoucoin.org"));
-	    vSeeds.push_back(CDNSSeedData("6",  "node6.geaoucoin.org"));
+	vSeeds.push_back(CDNSSeedData("6",  "node6.geaoucoin.org"));
         vSeeds.push_back(CDNSSeedData("7",  "node7.geaoucoin.org"));
         vSeeds.push_back(CDNSSeedData("8",  "node8.geaoucoin.org"));
         vSeeds.push_back(CDNSSeedData("9",  "node9.geaoucoin.org"));
         vSeeds.push_back(CDNSSeedData("10", "node10.geaoucoin.org"));
-		vSeeds.push_back(CDNSSeedData("11", "45.77.174.96"));
+	vSeeds.push_back(CDNSSeedData("11", "45.77.174.96"));
 		
         convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
 
@@ -147,7 +147,7 @@ public:
         //strSporkKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
         //strMasternodePaymentsPubKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
         strDarksendPoolDummyAddress = "EVVUpZWDQYSfb2mF6yqtK1P6j6Kd3gbrK8";
-        nLastPOWBlock = 100000;
+        nLastPOWBlock = 800000;
         nPOSStartBlock = 1;
     }
 
