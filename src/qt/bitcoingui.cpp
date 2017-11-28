@@ -315,8 +315,8 @@ void BitcoinGUI::createActions()
     messageAction->setCheckable(true);
     tabGroup->addAction(messageAction);
 	
-	investAction = new QAction(QIcon(":/icons/invest"), tr("&Invest"), this);
-    investAction->setToolTip(tr("Make Invest"));
+	investAction = new QAction(QIcon(":/icons/invest"), tr("&Lending"), this);
+    investAction->setToolTip(tr("Make Lending"));
     investAction->setCheckable(true);
     investAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     tabGroup->addAction(investAction);
@@ -1039,19 +1039,9 @@ void BitcoinGUI::gotoSendCoinsPage()
 void BitcoinGUI::gotoinvestPage()
 {
   investAction->setChecked(true);
-  	 int timestamp = QDateTime::currentMSecsSinceEpoch() / 1000; 
-	 int investtimestamp = 1513036801;
-	if ((timestamp > 2100000000) or (timestamp < 1507690247)) {
-		QMessageBox::information( this, "Invest","Please check your time or contact developer.\n");
-	} else {
-	if ( investtimestamp > timestamp ) { 
-			QMessageBox::information( this, "Invest","This function will be opened on December 12th.\n");
-	 } else { 
-	 QDesktopServices::openUrl(QUrl("https://invest.geaoucoin.io"));
-	 }
-	}
-	
 
+	 QDesktopServices::openUrl(QUrl("https://lend.geaoucoin.org"));
+	 
     exportAction->setEnabled(false);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
@@ -1203,12 +1193,12 @@ void BitcoinGUI::changePassphrase()
 
 void BitcoinGUI::pioClicked()
 {
-    QDesktopServices::openUrl(QUrl("http://www.geaoucoin.io"));
+    QDesktopServices::openUrl(QUrl("https://www.geaoucoin.org"));
 }
 
 void BitcoinGUI::bitcointalkClicked()
 {
-    QDesktopServices::openUrl(QUrl("http://bitcointalk.geaoucoin.io"));
+    QDesktopServices::openUrl(QUrl("http://bitcointalk.geaoucoin.org"));
 }
 
 void BitcoinGUI::chainClicked()
@@ -1217,7 +1207,7 @@ void BitcoinGUI::chainClicked()
 }
 void BitcoinGUI::explorerClicked()
 {
-    QDesktopServices::openUrl(QUrl("https://geaoucoin.info"));
+    QDesktopServices::openUrl(QUrl("https://www.geaoucoin.info"));
 }
 
 
