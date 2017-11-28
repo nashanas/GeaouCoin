@@ -22,7 +22,7 @@ GeaouCoin is a Pow/PoS-based cryptocurrency, and depend upon libsecp256k1 by sip
   <li>Number of confirmation : 10</li>
 </ul>
 
-For more information, as well as an immediately useable, binary version of the GeaouCoin Core software, see https://geaoucoin.io
+For more information, as well as an immediately useable, binary version of the GeaouCoin Core software, see https://geaoucoin.org
 
 <h3>How to mine ?</h3>
 
