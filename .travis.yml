@@ -48,7 +48,7 @@ before_script:
     - if [ -n "$OSX_SDK" -a -f depends/sdk-sources/MacOSX${OSX_SDK}.sdk.tar.gz ]; then tar -C depends/SDKs -xf depends/sdk-sources/MacOSX${OSX_SDK}.sdk.tar.gz; fi
     - chmod +x depends/config.guess
     - chmod +x depends/config.sub
-    - sudo make HOST=x86_64-w64-mingw32 -j4 -C depends
+    - make $MAKEJOBS -C depends HOST=$HOST $DEP_OPTS
 script:
     - export TRAVIS_COMMIT_LOG=`git log --format=fuller -1`
     - if [ -n "$USE_SHELL" ]; then export CONFIG_SHELL="$USE_SHELL"; fi
