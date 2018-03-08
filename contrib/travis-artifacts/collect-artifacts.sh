@@ -20,12 +20,12 @@ ZIPFILES=$(ls $OUTDIR/bin/* || true)
 
 # Linux artifacts
 [ -z "$ZIPFILES" ] || \
-       zip -uj $RELEASEDIR/castle-$COMMIT.zip ${ZIPFILES}
+       zip -uj $RELEASEDIR/geaoucoin-$COMMIT.zip ${ZIPFILES}
 
 # MaxOSX artifacts
-cp -a Castle-Core.dmg $RELEASEDIR || true
+cp -a GeaouCoin-Core.dmg $RELEASEDIR || true
 
 # Windows artifacts
-cp -a castle-*-win*-setup.exe $RELEASEDIR || true
+cp -a geaoucoin-*-win*-setup.exe $RELEASEDIR || true
 
 find $RELEASEDIR
