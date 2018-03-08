@@ -3,10 +3,10 @@
 # Distributed under the MIT/X11 software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-have castled && {
+have geaoucoind && {
 
-# call $castled for RPC
-_castle_rpc() {
+# call $geaoucoind for RPC
+_geaoucoin_rpc() {
     # determine already specified args necessary for RPC
     local rpcargs=()
     for i in ${COMP_LINE}; do
@@ -16,23 +16,23 @@ _castle_rpc() {
                 ;;
         esac
     done
-    $castled "${rpcargs[@]}" "$@"
+    $geaoucoind "${rpcargs[@]}" "$@"
 }
 
-# Add castle accounts to COMPREPLY
-_castle_accounts() {
+# Add geaoucoin accounts to COMPREPLY
+_geaoucoin_accounts() {
     local accounts
-    accounts=$(_castle_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
+    accounts=$(_geaoucoin_rpc listaccounts | awk '/".*"/ { a=$1; gsub(/"/, "", a); print a}')
     COMPREPLY=( "${COMPREPLY[@]}" $( compgen -W "$accounts" -- "$cur" ) )
 }
 
-_castled() {
+_geaoucoind() {
     local cur prev words=() cword
-    local castled
+    local geaoucoind
 
-    # save and use original argument to invoke castled
-    # castled might not be in $PATH
-    castled="$1"
+    # save and use original argument to invoke geaoucoind
+    # geaoucoind might not be in $PATH
+    geaoucoind="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n = cur prev words cword
@@ -53,7 +53,7 @@ _castled() {
     if ((cword > 3)); then
         case ${words[cword-3]} in
             addmultisigaddress)
-                _castle_accounts
+                _geaoucoin_accounts
                 return 0
                 ;;
             getbalance|gettxout|importaddress|importprivkey|listreceivedbyaccount|listreceivedbyaddress|listsinceblock)
@@ -74,7 +74,7 @@ _castled() {
                 return 0
                 ;;
             move|setaccount)
-                _castle_accounts
+                _geaoucoin_accounts
                 return 0
                 ;;
         esac
@@ -90,7 +90,7 @@ _castled() {
             return 0
             ;;
         getaccountaddress|getaddressesbyaccount|getbalance|getnewaddress|getreceivedbyaccount|listtransactions|move|sendfrom|sendmany)
-            _castle_accounts
+            _geaoucoin_accounts
             return 0
             ;;
     esac
@@ -114,12 +114,12 @@ _castled() {
 
             # only parse --help if senseful
             if [[ -z "$cur" || "$cur" =~ ^- ]]; then
-                helpopts=$($castled --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
+                helpopts=$($geaoucoind --help 2>&1 | awk '$1 ~ /^-/ { sub(/=.*/, "="); print $1 }' )
             fi
 
             # only parse help if senseful
             if [[ -z "$cur" || "$cur" =~ ^[a-z] ]]; then
-                commands=$(_castle_rpc help 2>/dev/null | awk '$1 ~ /^[a-z]/ { print $1; }')
+                commands=$(_geaoucoin_rpc help 2>/dev/null | awk '$1 ~ /^[a-z]/ { print $1; }')
             fi
 
             COMPREPLY=( $( compgen -W "$helpopts $commands" -- "$cur" ) )
@@ -133,7 +133,7 @@ _castled() {
     esac
 }
 
-complete -F _castled castled castle-cli
+complete -F _geaoucoind geaoucoind
 }
 
 # Local variables:
