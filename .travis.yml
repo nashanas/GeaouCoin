@@ -61,6 +61,7 @@ script:
     - chmod +x build_detect_platform
     - cd /home/travis/build/nashanas/GeaouCoin/src/secp256k1
     - chmod +x autogen.sh
+    - cd /home/travis/build/nashanas/GeaouCoin/
     - qmake
     - make
     - make distdir PACKAGE=bitcoin VERSION=$HOST
