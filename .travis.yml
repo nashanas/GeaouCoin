@@ -55,8 +55,10 @@ script:
     - OUTDIR=$BASE_OUTDIR/$TRAVIS_PULL_REQUEST/$TRAVIS_JOB_NUMBER-$HOST
     - BITCOIN_CONFIG_ALL="--disable-dependency-tracking --prefix=$TRAVIS_BUILD_DIR/depends/$HOST --bindir=$OUTDIR/bin --libdir=$OUTDIR/lib"
     - depends/$HOST/native/bin/ccache --max-size=$CCACHE_SIZE
+    - export PATH="$OUTDIR/lib:$PATH"
+    - export PATH="$TRAVIS_BUILD_DIR/depends/$HOST:$PATH"
     - qmake
-    - make --prefix=$TRAVIS_BUILD_DIR/depends/$HOST --bindir=$OUTDIR/bin --libdir=$OUTDIR/lib
+    - make
     - make distdir PACKAGE=bitcoin VERSION=$HOST
 after_script:
     - echo $TRAVIS_COMMIT_RANGE
