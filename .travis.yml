@@ -16,7 +16,12 @@ before_install:
   - tar xjf openssl.tar.gz
   - pwd
   - cd ../
+  - cd src/leveldb
+  - chmod +x build_detect_platform
+  - cd ../secp256k1/
+  - chmod +x autogen.sh
+  
   
 script:
-  - cd src
+  - cd /Users/travis/build/nashanas/GeaouCoin/altdepen/src
   - make -f makefile.osx
