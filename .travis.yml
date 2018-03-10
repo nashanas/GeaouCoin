@@ -7,7 +7,9 @@ compiler:
   - clang
 
 before_install:
-  - brew install openssl miniupnpc qrencode
+  - brew update
+  - brew doctor
+  - brew install boost openssl miniupnpc qrencode
   - git clone https://github.com/nashanas/altdepen.git
   - cd altdepen
   - tar xjf berkeley-db.tar.gz
