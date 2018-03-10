@@ -22,5 +22,5 @@ before_install:
   
   
 script:
-  - cd /Users/travis/build/nashanas/GeaouCoin/altdepen/src
+  - cd /Users/travis/build/nashanas/GeaouCoin/src
   - make -f makefile.osx
