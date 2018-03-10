@@ -9,6 +9,7 @@
 CXX=clang++
 C=clang
 DEPSDIR=/usr/local
+DEPSDIR2 = /Users/travis/build/nashanas/GeaouCoin/altdepen
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
@@ -16,13 +17,22 @@ INCLUDEPATHS= \
  -I"$(DEPSDIR)/include" \
  -I"$(DEPSDIR)/Cellar/boost/1.59.0/include" \
  -I"$(DEPSDIR)/Cellar/berkeley-db4/4.8.30/include" \
- -I"$(DEPSDIR)/openssl-1.0.1p/include"
+ -I"$(DEPSDIR)/openssl-1.0.1p/include" \
+ 
+ -I"$(DEPSDIR2)/boost@1.60/1.60.0/include" \
+ -I"$(DEPSDIR2)/berkeley-db@4/4.8.30/include" \
+ -I"$(DEPSDIR2)/openssl/1.0.2n/include" \
+ -I"$(DEPSDIR2)/miniupnpc/2.0.20171212/include
 
 LIBPATHS= \
  -L"$(DEPSDIR)/lib" \
  -L"$(DEPSDIR)/Cellar/boost/1.59.0/lib" \
  -L"$(DEPSDIR)/Cellar/berkeley-db4/4.8.30/lib" \
- -L"$(DEPSDIR)/openssl-1.0.1p/lib"
+ -L"$(DEPSDIR)/openssl-1.0.1p/lib" \
+ -L"$(DEPSDIR2)/boost@1.60/1.60.0/lib" \
+ -L"$(DEPSDIR2)/berkeley-db@4/4.8.30/lib" \
+ -L"$(DEPSDIR2)/openssl/1.0.2n/lib" \
+ -L"$(DEPSDIR2)/miniupnpc/2.0.20171212/lib"
 
 USE_UPNP:=1
 USE_WALLET:=1
