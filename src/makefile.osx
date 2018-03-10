@@ -21,7 +21,7 @@ INCLUDEPATHS= \
  -I"$(DEPSDIR2)/boost@1.60/1.60.0/include" \
  -I"$(DEPSDIR2)/berkeley-db@4/4.8.30/include" \
  -I"$(DEPSDIR2)/openssl/1.0.2n/include" \
- -I"$(DEPSDIR2)/miniupnpc/2.0.20171212/include
+ -I"$(DEPSDIR2)/miniupnpc/2.0.20171212/include"
 
 LIBPATHS= \
  -L"$(DEPSDIR)/lib" \
