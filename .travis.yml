@@ -15,10 +15,9 @@ before_install:
   - tar xjf miniupnpc.tar.gz
   - tar xjf openssl.tar.gz
   - pwd
-  - cd ../
-  - cd src/leveldb
+  - cd /Users/travis/build/nashanas/GeaouCoin/src/leveldb
   - chmod +x build_detect_platform
-  - cd ../secp256k1/
+  - cd /Users/travis/build/nashanas/GeaouCoin/src/secp256k1/
   - chmod +x autogen.sh
   
   
