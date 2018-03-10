@@ -18,7 +18,6 @@ INCLUDEPATHS= \
  -I"$(DEPSDIR)/Cellar/boost/1.59.0/include" \
  -I"$(DEPSDIR)/Cellar/berkeley-db4/4.8.30/include" \
  -I"$(DEPSDIR)/openssl-1.0.1p/include" \
- 
  -I"$(DEPSDIR2)/boost@1.60/1.60.0/include" \
  -I"$(DEPSDIR2)/berkeley-db@4/4.8.30/include" \
  -I"$(DEPSDIR2)/openssl/1.0.2n/include" \
