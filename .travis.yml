@@ -8,7 +8,7 @@ compiler:
 
 before_install:
   - brew update
-  - brew install miniupnpc qrencode gmp
+  - brew install miniupnpc qrencode
   - ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/    
   - ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
   - git clone https://github.com/nashanas/altdepen.git
@@ -25,5 +25,6 @@ before_install:
   
   
 script:
-  - cd /Users/travis/build/nashanas/GeaouCoin/src
-  - make -f makefile.osx
+  - cd /Users/travis/build/nashanas/GeaouCoin/
+  - qmake
+  - make
