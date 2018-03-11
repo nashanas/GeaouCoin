@@ -9,6 +9,9 @@ compiler:
 before_install:
   - brew update
   - brew install miniupnpc qrencode
+  - cd /usr/local/include 
+  - ln -s ../opt/openssl/include/openssl .
+  - cd /Users/travis/build/nashanas/GeaouCoin/
   - brew install qt@5.5
   - brew link --force qt@5.5
   - echo 'export PATH="$(brew --prefix qt@5.5)/bin:$PATH"' >> ~/.bashrc
