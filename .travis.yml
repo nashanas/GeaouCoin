@@ -8,7 +8,11 @@ compiler:
 
 before_install:
   - brew update
-  - brew install miniupnpc qrencode qt5
+  - brew install miniupnpc qrencode
+  - brew install qt@5.5
+  - brew link --force qt@5.5
+  - echo 'export PATH="$(brew --prefix qt@5.5)/bin:$PATH"' >> ~/.bashrc
+  - which qmake
   - ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/    
   - ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
   - git clone https://github.com/nashanas/altdepen.git
