@@ -45,8 +45,8 @@ win32:QRENCODE_LIB_PATH=C:/dev/coindeps32/qrencode-3.4.4/.libs
 win32:SECP256K1_LIB_PATH =C:/dev/coindeps32/secp256k1/lib
 win32:SECP256K1_INCLUDE_PATH =C:/dev/coindeps32/secp256k1/include
 
-BOOST_INCLUDE_PATH=altdepen/boost@1.60/1.60.0/include
-BOOST_LIB_PATH=altdepen/boost@1.60/1.60.0/lib
+BOOST_INCLUDE_PATH=/usr/local/boost_1_57_0/include
+BOOST_LIB_PATH=/usr/local/boost_1_57_0/lib
 BDB_LIB_PATH=altdepen/berkeley-db@4/4.8.30/lib
 BDB_INCLUDE_PATH=altdepen/berkeley-db@4/4.8.30/include
 MINIUPNPC_INCLUDE_PATH=altdepen/miniupnpc/2.0.20171212/include
