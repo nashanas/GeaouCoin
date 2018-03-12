@@ -51,6 +51,8 @@ BDB_LIB_PATH=altdepen/berkeley-db@4/4.8.30/lib
 BDB_INCLUDE_PATH=altdepen/berkeley-db@4/4.8.30/include
 MINIUPNPC_INCLUDE_PATH=altdepen/miniupnpc/2.0.20171212/include
 MINIUPNPC_LIB_PATH=altdepen/miniupnpc/2.0.20171212/lib
+OPENSSL_INCLUDE_PATH=altdepen/openssl/1.0.2n/include
+OPENSSL_LIB_PATH=altdepen/openssl/1.0.2n/lib
 
 OBJECTS_DIR = build
 MOC_DIR = build
