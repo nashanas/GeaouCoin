@@ -12,8 +12,8 @@ before_install:
   - wget http://downloads.sourceforge.net/project/boost/boost/1.57.0/boost_1_57_0.tar.gz
   - tar xjf boost_1_57_0.tar.gz
   - cd boost_1_57_0
-  - ./bootstrap.sh toolset=clang
-  - ./b2 -j4 toolset=clang --build-type=minimal --with-program_options --with-system --with-filesystem --with-chrono --with-thread cxxflags="-stdlib=libstdc++" linkflags="-stdlib=libstdc++" link=static address-model=64 --layout=tagged install --prefix=/usr/local/opt/
+  - ./bootstrap.sh toolset=clang --prefix=/usr/local/boost_1_57_0
+  - sudo ./b2 -j4 toolset=clang --build-type=minimal --with-program_options --with-system --with-filesystem --with-chrono --with-thread cxxflags="-stdlib=libstdc++" linkflags="-stdlib=libstdc++" link=static address-model=64 --layout=tagged install
   - ls /usr/local/opt/
   - ln -s ../opt/openssl/include/openssl .
   - cd /Users/travis/build/nashanas/GeaouCoin/
