@@ -8,7 +8,11 @@ compiler:
 
 before_install:
   - brew update
-  - brew install miniupnpc qrencode
+  - brew install miniupnpc qrencode berkeley-db4
+  - brew link berkeley-db4 --force
+  - brew link openssl --force
+  - sudo mkdir -p /opt/local/lib
+  - sudo ln -s /usr/local/lib /opt/local/lib/db48
   - wget http://downloads.sourceforge.net/project/boost/boost/1.57.0/boost_1_57_0.tar.gz
   - tar xjf boost_1_57_0.tar.gz
   - cd boost_1_57_0
