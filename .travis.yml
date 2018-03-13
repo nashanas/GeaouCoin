@@ -31,13 +31,13 @@ before_install:
   - ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
   - git clone https://github.com/nashanas/altdepen.git
   - cd altdepen
-  - tar xjf berkeley-db.tar.gz
-  - tar xjf boost.tar.gz
   - tar xjf miniupnpc.tar.gz
   - tar xjf openssl.tar.gz
   - pwd
   - cd /Users/travis/build/nashanas/GeaouCoin/src/leveldb
   - chmod +x build_detect_platform
+  - make clean
+  - make
   - cd /Users/travis/build/nashanas/GeaouCoin/src/secp256k1/
   - chmod +x autogen.sh
   
