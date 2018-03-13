@@ -44,4 +44,4 @@ before_install:
 script:
   - cd /Users/travis/build/nashanas/GeaouCoin/
   - qmake
-  - travis_wait make
+  - travis_wait 30 make
