@@ -47,8 +47,8 @@ win32:SECP256K1_INCLUDE_PATH =C:/dev/coindeps32/secp256k1/include
 
 BOOST_INCLUDE_PATH=/usr/local/boost_1_57_0/include
 BOOST_LIB_PATH=/usr/local/boost_1_57_0/lib
-BDB_LIB_PATH=altdepen/berkeley-db@4/4.8.30/lib
-BDB_INCLUDE_PATH=altdepen/berkeley-db@4/4.8.30/include
+BDB_LIB_PATH=/opt/local/lib/db48/lib
+BDB_INCLUDE_PATH=/opt/local/lib/db48/include
 MINIUPNPC_INCLUDE_PATH=altdepen/miniupnpc/2.0.20171212/include
 MINIUPNPC_LIB_PATH=altdepen/miniupnpc/2.0.20171212/lib
 OPENSSL_INCLUDE_PATH=altdepen/openssl/1.0.2n/include
